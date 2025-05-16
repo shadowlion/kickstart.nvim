@@ -683,6 +683,15 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        html = {
+          filetypes = {
+            'html',
+            'tmpl',
+          },
+        },
+        cssls = {},
+        emmet_language_server = {},
+        tailwindcss = {},
 
         lua_ls = {
           -- cmd = { ... },
@@ -773,7 +782,9 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        html = { 'prettier' },
+        css = { 'prettier' },
       },
     },
   },
@@ -961,6 +972,7 @@ require('lazy').setup({
         'css',
         'javascript',
         'typescript',
+        'tsx',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
